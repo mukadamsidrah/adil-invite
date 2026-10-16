@@ -16,7 +16,7 @@
     button,a{font:inherit}
     .intro{min-height:100svh;display:grid;place-items:center;padding:28px 18px;overflow:hidden;background:radial-gradient(ellipse at 50% 25%,#fffdf8 0, var(--ivory) 65%)}
     .intro-inner{width:min(100%,560px);text-align:center}
-    .eyebrow{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+    .eyebrow{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brown)}
     h1,h2,.names{font-family:'Cormorant Garamond',serif;font-weight:400}
     .intro h1{font-size:clamp(2.2rem,8vw,4rem);line-height:1.05;margin:12px 0 7px}
     .intro-copy{font-size:.78rem;letter-spacing:.1em;color:var(--muted);margin-bottom:34px}
@@ -136,6 +136,7 @@
     #invitation.visible{display:block;animation:fadeUp 1s ease forwards}
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
     .section{padding:76px 20px;text-align:center}
+    .closing-section {background-color: #dfc3a6;}
     .hero{min-height:90svh;display:grid;place-items:center;position:relative;background:linear-gradient(#f8f2e8e8,#f8f2e8ee),radial-gradient(ellipse at 50% 20%,#fff,#eadcc6)}
     .frame{border:1px solid var(--champagne);outline:1px solid #d9c5a55c;outline-offset:7px;width:min(100%,650px);padding:55px 22px;position:relative}
     .frame:before,.frame:after{content:"✦";position:absolute;color:var(--gold);font-size:1.1rem;background:var(--ivory);padding:5px;left:50%;transform:translateX(-50%)}
@@ -165,6 +166,17 @@
     .edit-note{font-size:.68rem;color:var(--muted);margin-top:18px}
     .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}
     .btn{display:inline-block;text-decoration:none;padding:13px 19px;border:1px solid var(--gold);color:var(--ink);font-size:.67rem;letter-spacing:.1em;text-transform:uppercase}
+    .closing-section .btn {
+background-color: #713B43;
+color: #FFF8EF;
+border-color: #713B43;
+transition: background-color 0.3s ease;
+}
+
+.closing-section .btn:hover {
+background-color: #8A4B55;
+border-color: #8A4B55;
+}
     .btn.primary{background:var(--burgundy);border-color:var(--burgundy);color:#fff8ef}
     footer{text-align:center;padding:28px 18px 40px;font-size:.65rem;color:var(--muted);letter-spacing:.12em}
     @media(max-width:560px){.event-grid{grid-template-columns:1fr;max-width:330px}.event{padding:20px}.section{padding:60px 18px}.envelope-wrap{height:235px}.open .letter{transform:translateY(-125px)}}
@@ -189,7 +201,7 @@
             <div class="seal" aria-hidden="true">A<span style="font-size:.7em">&</span>Z</div>
           </div>
         </div>
-        <button class="open-hint" id="openButton" aria-expanded="false" aria-controls="invitation">Tap to open the invitation ✦</button>
+        <button class="open-hint" id="openButton" aria-expanded="false" aria-controls="invitation">Tap the envelope to open the invitation ✦</button>
       
       </div>
     </section>
@@ -198,8 +210,9 @@
       <section class="section hero">
         <div class="frame">
           <div class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+          <b>
           <p class="translation">In the name of Allah, the Most Gracious, the Most Merciful</p>
-          <div class="eyebrow">With the blessings of Allah and their families</div>
+          <div class="eyebrow">With the blessings of Allah</div>
           <p class="body-copy" style="margin-top:12px">We joyfully invite you to the Nikah ceremony of</p>
           <div class="names" style="margin-bottom:0">Adil</div>
           <div class="parent-label">Son of</div>
@@ -210,23 +223,26 @@
           <div class="parent-names">Mr.Khalil & Mrs.Shabana Antule</div>
           <div class="ornament">✦ ✦ ✦</div>
           <p class="body-copy">Request the honour of your presence and blessings on their special day.</p>
+          </b>
           <div class="hero-date">Sunday · 6 December 2026</div>
+        
           <div class="nikah-panel">
             <h3>Nikah Ceremony</h3>
-            <p><b><strong>Date:</b> Sunday, 6 December 2026</strong><br><b><strong>Time:</b>After namaz-e-maghrib At Jama Masjid,PethMap</strong><br><b><strong>Reception Venue:</b>ground address</strong> <br><b><strong>Thereafter Dinner</b></strong></p>
+            <p><b><strong>Date:</b> Sunday, 6 December 2026</strong><br><b><strong>Time:</b>After Namaz-E-Maghrib At Jama Masjid,PethMap</strong><br><b><strong>Reception Venue:</b>Sports Ground,PethMap,Chiplun</strong> <br><b><strong>Thereafter Dinner</b></strong></p>
+          
           </div>
         
         </div>
       </section>
 
 
-      <section class="section">
+      <section class="section closing-section">
         <div class="eyebrow">With love and duas</div>
         <h2>We hope you can join us</h2>
         <p class="body-copy">Your presence and blessings would mean a great deal to our families.</p>
         <div class="actions">
          
-          <a class="btn" href="https://www.google.com/maps/place/Mi+kokni+shooting+ball+ground/@17.5402453,73.5079714,19.5z/data=!4m9!1m2!2m1!1smukadam+moholla+chiplun!3m5!1s0x3bc209e05e83e4ff:0xd3cffde591b24036!8m2!3d17.54031!4d73.5084872!16s%2Fg%2F11j8rlnxd2?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D">View venue</a>
+          <a class="btn" href="https://www.google.com/maps/place/Mi+kokni+shooting+ball+ground/@17.5403151,73.5059123,17z/data=!4m6!3m5!1s0x3bc209e05e83e4ff:0xd3cffde591b24036!8m2!3d17.54031!4d73.5084872!16s%2Fg%2F11j8rlnxd2?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">View venue</a>
         </div>
       </section>
     </div>
@@ -235,24 +251,41 @@
   <script>
     const openButton = document.getElementById('openButton');
     const envelopeWrap = document.getElementById('envelopeWrap');
+    const envelope = document.getElementById('envelope');
+    
     const invitation = document.getElementById('invitation');
     let opened = false;
+    function openInvitation() {
+  if (opened) return;
 
-    openButton.addEventListener('click', () => {
-      if (!opened) {
-        envelopeWrap.classList.add('open');
-        openButton.textContent = 'Opening your invitation…';
-        openButton.setAttribute('aria-expanded', 'true');
-        opened = true;
-        window.setTimeout(() => {
-          invitation.classList.add('visible');
-          openButton.textContent = 'Invitation opened ✦';
-          invitation.scrollIntoView({behavior: 'smooth', block: 'start'});
-        }, 850);
-      } else {
-        invitation.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }
-    });
+  opened = true;
+  envelopeWrap.classList.add('open');
+
+  openButton.textContent = 'Opening your invitation…';
+  openButton.setAttribute('aria-expanded', 'true');
+
+  // Let the letter slide out first.
+  setTimeout(() => {
+    // Give guests 5 seconds to read the letter.
+    setTimeout(() => {
+      invitation.classList.add('visible');
+      openButton.textContent = 'Invitation opened ✦';
+
+      setTimeout(() => {
+        invitation.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }, 2000);
+  }, 1200);
+}
+
+// Clicking anywhere on the envelope opens it.
+envelope.addEventListener('click', openInvitation);
+
+// The button underneath works too.
+openButton.addEventListener('click', openInvitation);
 
   </script>
 </body>
